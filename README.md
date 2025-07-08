@@ -151,3 +151,21 @@ Si se usara un `HashMap` en lugar de `TreeMap`, entonces `hashCode()` y `equals(
 ### Conclusión
 Para administrar un directorio telefónico sin claves duplicadas y ordenado por nombre, la mejor solución es un **`TreeMap`**. Esto garantiza orden automático y eficiencia en operaciones de búsqueda y modificación.
 
+
+# Mapas en Java – HashMap, TreeMap y LinkedHashMap
+
+## 📌 Información General
+
+- **Título:** Mapas en Java – HashMap, TreeMap y LinkedHashMap 
+- **Asignatura:** Estructura de Datos  
+- **Carrera:** Computación  
+- **Estudiante:** Carlos Antonio Gordillo Tenemaza  
+- **Correo institucional:** cgordillot@est.ups.edu.ec  
+- **Fecha:** 08/07/2025  
+- **Profesor:** Ing. Pablo Torres  
+
+---
+
+## 🖼️ Captura de Pantalla
+
+![Vista previa del proyecto](src/Foto/Empleado.png)
