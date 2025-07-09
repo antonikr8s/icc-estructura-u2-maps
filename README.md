@@ -161,7 +161,7 @@ Para administrar un directorio telefónico sin claves duplicadas y ordenado por 
 - **Carrera:** Computación  
 - **Estudiante:** Carlos Antonio Gordillo Tenemaza  
 - **Correo institucional:** cgordillot@est.ups.edu.ec  
-- **Fecha:** 08/07/2025  
+- **Fecha:** 09/07/2025  
 - **Profesor:** Ing. Pablo Torres  
 
 ---

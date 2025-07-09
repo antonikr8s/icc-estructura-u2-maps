@@ -11,6 +11,10 @@ public class Empleado implements Comparable<Empleado> {
         this.position = position;
     }
 
+    public Empleado(int id){
+        this.id=id;
+    }
+
     public int getId() {
         return id;
     }
