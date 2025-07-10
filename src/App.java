@@ -9,12 +9,7 @@ import utils.StudentValidator;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //
-        var estudiante = StudentValidator.validarDatos();
-        System.out.println("👤 Estudiante: " + estudiante.nombre());
-        System.out.println("✉️  Correo: " + estudiante.correo());
 
-        //
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
         runMapExample();
 
@@ -69,26 +64,24 @@ public class App {
 
     private static void runEjercicios() {
         Ejercicios ejercicios = new Ejercicios();
-        // ----------------------------------------------------------
-        // Ejercicio01 Verificar si son anagramas, metodo Estatico
-        // ----------------------------------------------------------
 
-        
-        System.out.println("\n===== EJERCICIO.01 ====");
-        System.out.println("-> ¿'listen' y 'silent' son anagramas?");
+        // ----------------------------------------------------------
+        // Ejercicio 01: Verificar si son anagramas (método estático)
+        // ----------------------------------------------------------
+        System.out.println("===== EJERCICIO.01 ====");
+        System.out.println("¿'listen' y 'silent' son anagramas?");
         System.out.println(Ejercicios.areAnagrams("listen", "silent"));
 
-        System.out.println("\n-> ¿'hello' y 'bello' son anagramas?");
+        System.out.println("¿'hello' y 'bello' son anagramas?");
         System.out.println(Ejercicios.areAnagrams("hello", "bello"));
 
-        System.out.println("\n-> ¿'triangle' y 'integral' son anagramas?");
+        System.out.println("¿'triangle' y 'integral' son anagramas?");
         System.out.println(Ejercicios.areAnagrams("triangle", "integral"));
-        // ----------------------------------------------------------
-        // Ejercicio02 Buscar dos numeros que sumen un objetivo
-        // ----------------------------------------------------------
 
-        
-        System.out.println("\n===== EJERCICIO.02 ====");
+        // ----------------------------------------------------------
+        // Ejercicio 02: Buscar dos números que sumen un objetivo
+        // ----------------------------------------------------------
+        System.out.println("===== EJERCICIO.02 ====");
 
         // Ejemplo A
         int[] numsA = { 9, 2, 3, 6 };
@@ -96,8 +89,8 @@ public class App {
         int[] resultadoA = ejercicios.sumatoriaDeDos(numsA, objetivoA);
 
         System.out.println("Ejemplo A:");
-        System.out.println("\tInput: nums = [9,2,3,6], objetivo = 5");
-        System.out.print("\tOutput: ");
+        System.out.println("Input: nums = [9,2,3,6], objetivo = 5");
+        System.out.print("Output: ");
         if (resultadoA != null) {
             System.out.println("[" + resultadoA[0] + "," + resultadoA[1] + "]");
         } else {
@@ -108,9 +101,9 @@ public class App {
         int objetivoB = 10;
         int[] resultadoB = ejercicios.sumatoriaDeDos(numsA, objetivoB);
 
-        System.out.println("\nEjemplo B:");
-        System.out.println("\tInput: nums = [9,2,3,6], objetivo = 10");
-        System.out.print("\tOutput: ");
+        System.out.println("Ejemplo B:");
+        System.out.println("Input: nums = [9,2,3,6], objetivo = 10");
+        System.out.print("Output: ");
         if (resultadoB != null) {
             System.out.println("[" + resultadoB[0] + "," + resultadoB[1] + "]");
         } else {
@@ -118,21 +111,17 @@ public class App {
         }
 
         // ----------------------------------------------------------
-        // Ejercicio03 Contar caracteres
+        // Ejercicio 03: Contar caracteres
         // ----------------------------------------------------------
-
-        
-        System.out.println("\n===== EJERCICIO.03 ====");
+        System.out.println("===== EJERCICIO.03 ====");
         System.out.println("Frecuencia de caracteres en 'hola':");
         ejercicios.contarCaracteres("hola");
 
         // ----------------------------------------------------------
-        // Ejercicio04 Verificar si son anagramas, metodo NoEstatico
+        // Ejercicio 04: Verificar si son anagramas (método no estático)
         // ----------------------------------------------------------
-        
-        System.out.println("\n===== EJERCICIO.04 ====");
+        System.out.println("===== EJERCICIO.04 ====");
         System.out.println("¿'roma' y 'amor' son anagramas?");
-        System.out.println(ejercicios.sonAnagramas("roma", "amor")); // true
-
+        System.out.println(ejercicios.sonAnagramas("roma", "amor"));
     }
 }
