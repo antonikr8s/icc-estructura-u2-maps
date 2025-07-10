@@ -152,11 +152,11 @@ Si se usara un `HashMap` en lugar de `TreeMap`, entonces `hashCode()` y `equals(
 Para administrar un directorio telefónico sin claves duplicadas y ordenado por nombre, la mejor solución es un **`TreeMap`**. Esto garantiza orden automático y eficiencia en operaciones de búsqueda y modificación.
 
 
-# Mapas en Java – HashMap, TreeMap y LinkedHashMap
+# Proyecto: Mapas en Java con HashMap, TreeMap y LinkedHashMap
 
 ## 📌 Información General
 
-- **Título:** Mapas en Java – HashMap, TreeMap y LinkedHashMap 
+- **Título:** Gestión de Empleados y Ejercicios con Mapas en Java  
 - **Asignatura:** Estructura de Datos  
 - **Carrera:** Computación  
 - **Estudiante:** Carlos Antonio Gordillo Tenemaza  
@@ -166,6 +166,102 @@ Para administrar un directorio telefónico sin claves duplicadas y ordenado por 
 
 ---
 
-## 🖼️ Captura de Pantalla
+## 🛠️ Descripción
+
+Este proyecto implementa el uso de estructuras `HashMap`, `TreeMap` y `LinkedHashMap` en Java. Incluye:
+
+- Un sistema de gestión de empleados con patrón DAO e implementación doble (HashMap vs TreeMap).
+- Ejercicios prácticos relacionados con operaciones de mapas y lógica de programación:
+  - Verificación de anagramas
+  - Suma de dos números que den un objetivo
+  - Conteo de caracteres
+  - Validación adicional de anagramas
+
+---
+
+## 📂 Estructura del Código
+
+- `models/Empleado.java`: clase que modela un empleado con `id`, `name` y `position`.
+- `controllers/Mapa.java`: contiene ejemplos prácticos de uso de `HashMap`, `TreeMap` y `LinkedHashMap`.
+- `controllers/EmpleadoDao`, `EmpleadoDaoHashmap`, `EmpleadoDaoTreemap`: implementación de un patrón DAO para manejar empleados.
+- `controllers/EmpleadoController.java`: actúa como puente entre interfaz DAO y lógica de negocio.
+- `controllers/Ejercicios.java`: contiene 4 ejercicios usando estructuras tipo mapa.
+- `App.java`: contiene el método `main()` que ejecuta todos los ejemplos y pruebas.
+
+---
+
+## ✨ Funcionalidades
+
+- Insertar y eliminar empleados usando `HashMap` o `TreeMap`.
+- Mostrar empleados ordenados por clave (en TreeMap) o por orden de inserción (en LinkedHashMap).
+- Comparar implementación DAO en estructuras distintas.
+- Ejecutar ejercicios de lógica usando mapas:
+  - `areAnagrams()`
+  - `sumatoriaDeDos()`
+  - `contarCaracteres()`
+  - `sonAnagramas()`
+
+---
+
+
+## 🖼️ Captura de Pantalla 1
 
 ![Vista previa del proyecto](src/Foto/Empleado.png)
+
+## 🖼️ Captura de Pantalla 2
+
+![Vista previa del proyecto](src/Foto/EmpController.png)
+
+## 🖼️ Captura de Pantalla 3
+
+![Vista previa del proyecto](src/Foto/Ej.png)
+
+---
+
+## 🚀 Ejecución
+
+Para compilar y ejecutar el programa:
+
+1. Desde la carpeta raíz del proyecto, compila con:
+
+    ```bash
+    javac src/**/*.java -d bin
+    ```
+
+2. Luego ejecuta la clase principal:
+
+    ```bash
+    java -cp bin App
+    ```
+
+---
+
+## 🧑‍💻 Ejemplo de Entrada
+
+```plaintext
+===== EJERCICIO.01 ====
+-> ¿'listen' y 'silent' son anagramas?
+true
+
+-> ¿'hello' y 'bello' son anagramas?
+false
+
+-> ¿'triangle' y 'integral' son anagramas?
+true
+
+===== EJERCICIO.02 ====
+Ejemplo A:
+     Input: nums = [9,2,3,6], objetivo = 5 
+     Output: [1,2]
+
+Ejemplo B:
+     Input: nums = [9,2,3,6], objetivo = 10 
+     Output: null
+
+===== EJERCICIO.03 ====
+Frecuencia de caracteres en 'hola':
+{a=1, h=1, l=1, o=1}
+
+===== EJERCICIO.04 ====
+¿'roma' y 'amor' son anagramas?
+true

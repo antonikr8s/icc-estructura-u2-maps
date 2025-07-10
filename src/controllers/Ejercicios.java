@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Ejercicios {
 
@@ -27,9 +28,42 @@ public class Ejercicios {
      * Explicación: Ambas cadenas tienen los mismos caracteres con la misma
      * frecuencia.
      */
-    public static boolean areAnagrams(String str1, String str2) {
-        throw new UnsupportedOperationException("Not implemented yet");
 
+    public static boolean areAnagrams(String str1, String str2) {
+        // Verificacion
+        if (str1 == null || str2 == null || str1.length() != str2.length()) {
+            return false;
+        }
+
+        // Ignorar las mayusculas
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        // Contar los caracteres
+        Map<Character, Integer> contador = new HashMap<>();
+        for (char c : str1.toCharArray()) {
+            contador.put(c, contador.getOrDefault(c, 0) + 1);
+        }
+
+        // restar los caracteres
+        for (char c : str2.toCharArray()) {
+            if (!contador.containsKey(c)) {
+                return false;
+            }
+            contador.put(c, contador.get(c) - 1);
+            if (contador.get(c) < 0) {
+                return false;
+            }
+        }
+
+        // Verificar que todos los valores sean cero
+        for (int value : contador.values()) {
+            if (value != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /*
@@ -48,7 +82,19 @@ public class Ejercicios {
      * Output: null
      */
     public int[] sumatoriaDeDos(int[] nums, int objetivo) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Map<Integer, Integer> mapa = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int complemento = objetivo - nums[i];
+
+            if (mapa.containsKey(complemento)) {
+                return new int[] { mapa.get(complemento), i };
+            }
+
+            mapa.put(nums[i], i);
+        }
+
+        return null; // no hay solucion
     }
 
     /**
@@ -60,7 +106,18 @@ public class Ejercicios {
      * Output: {h=1, o=1, l=1, a=1}
      */
     public void contarCaracteres(String texto) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (texto == null) {
+            System.out.println("Texto inválido.");
+            return;
+        }
+
+        Map<Character, Integer> frecuencia = new HashMap<>();
+
+        for (char c : texto.toCharArray()) {
+            frecuencia.put(c, frecuencia.getOrDefault(c, 0) + 1);
+        }
+
+        System.out.println(frecuencia);
     }
 
     /**
@@ -72,6 +129,6 @@ public class Ejercicios {
      * Output: true
      */
     public boolean sonAnagramas(String palabra1, String palabra2) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return areAnagrams(palabra1, palabra2);
     }
 }
